@@ -1,7 +1,7 @@
 Package: com.thatmarcel.tweaks.cchue
 Name: CCHue
 Depends: mobilesubstrate, ws.hbang.common (>= 1.11)
-Version: 1.0.0
+Version: 1.0.1
 Architecture: iphoneos-arm
 Description: Add Philips Hue toggles to control center
 Maintainer: Marcel Braun

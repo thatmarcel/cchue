@@ -194,19 +194,18 @@
 
         req.completionDataBlock = ^(NSDictionary *headers, NSData *resData) {
             self.networkRequestRunning = false;
-
-            [self fetchLightState];
 		};
 
 		req.errorBlock = ^(NSError *error) {
             self.networkRequestRunning = false;
-
-            [self fetchLightState];
 		};
 
         req.HTTPMethod = @"PUT";
 
 		[req startAsynchronous];
+
+        self.lightIsOn = !self.lightIsOn;
+        [self refreshState];
     }
 
     - (void) viewWillAppear:(BOOL)animated {
