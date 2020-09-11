@@ -1,0 +1,54 @@
+---
+name: CCHue
+icmd: sbreload
+
+CCHueSpringboard:
+  dir: Source/Springboard
+  type: tweak
+  files:
+    - "**/*.m"
+    - "../Helpers/*.m"
+  logos_files:
+    - "**/*.x"
+    - "**/*.xm"
+  frameworks:
+    - CoreFoundation
+    - Foundation
+    - UIKit
+    - Cephei
+
+CCHueControlCenterModule:
+  dir: Source/ControlCenterModule
+  type: bundle
+  ldflags: Frameworks/ControlCenterUIKit.tbd
+  install_location: /Library/ControlCenter/Bundles/
+  stage:
+    - "mkdir -p $proj_build_dir/$stagedir/$location/$name.bundle/"
+    - "mv $proj_build_dir/$stagedir/$location/$name $proj_build_dir/$stagedir/$location/$name.bundle/$name"
+  files:
+    - "**/*.m"
+    - "../Helpers/*.m"
+  logos_files:
+    - "**/*.x"
+    - "**/*.xm"
+  frameworks:
+    - CoreFoundation
+    - Foundation
+    - UIKit
+    - Cephei
+
+CCHuePreferences:
+  dir: Source/Preferences
+  type: prefs
+  frameworks:
+    - CoreFoundation
+    - Foundation
+    - UIKit
+    - Cephei
+    - CepheiPrefs
+  files:
+    - "**/*.m"
+    - "../Helpers/*.m"
+  logos_files:
+    - "**/*.x"
+    - "**/*.xm"

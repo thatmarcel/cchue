@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+    		<key>cell</key>
+    		<string>PSGroupCell</string>
+			<key>label</key>
+    		<string>Bridge Settings</string>
+			<key>footerText</key>
+    		<string>Generating a username requires the link button on the bridge to have been pressed in the last 30 seconds</string>
+		</dict>
+
+		<dict>
+    		<key>cell</key>
+    		<string>PSEditTextCell</string>
+			<key>label</key>
+    		<string>IP address</string>
+			<key>placeholder</key>
+    		<string>192.168.178.10</string>
+			<key>default</key>
+			<string></string>
+			<key>defaults</key>
+			<string>com.thatmarcel.tweaks.cchue.prefs</string>
+			<key>key</key>
+			<string>ip</string>
+		</dict>
+
+		<dict>
+    		<key>cell</key>
+    		<string>PSEditTextCell</string>
+			<key>label</key>
+    		<string>Username</string>
+			<key>placeholder</key>
+    		<string>Randomly generated</string>
+			<key>default</key>
+			<string></string>
+			<key>defaults</key>
+			<string>com.thatmarcel.tweaks.cchue.prefs</string>
+			<key>key</key>
+			<string>username</string>
+		</dict>
+
+		<dict>
+    		<key>cell</key>
+    		<string>PSButtonCell</string>
+			<key>label</key>
+    		<string>Generate username</string>
+			<key>action</key>
+			<string>generateUsername</string>
+		</dict>
+
+		<dict>
+    		<key>cell</key>
+    		<string>PSGroupCell</string>
+		</dict>
+
+		<dict>
+    		<key>cell</key>
+    		<string>PSLinkCell</string>
+			<key>label</key>
+    		<string>Select lights</string>
+			<key>action</key>
+			<string>selectLights</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>CCHue</string>
+</dict>
+</plist>
